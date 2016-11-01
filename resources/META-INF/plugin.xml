@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+  <id>com.rth.developer.plugin.dimen.refactor</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="vesperdone@gmail.com" url="https://github.com/rantianhua">Tianhua Ran</vendor>
+
+  <description><![CDATA[
+       Plugin for generating and modifying dimen values in different dimens.xml independent of resolution.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <html>
+  <b>1.0</b> (31/10/2016)
+  <ul>
+    <li>Initial release</li>
+  </ul>
+   <b>1.0.1</b> (1/11/2016)
+  <ul>
+    <li>change some label, and add some error handling</li>
+  </ul>
+</html>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="RthDimenRefactor" class="com.rth.android.dimenrefactor.DimenAction" text="Dimen Refactor"
+            description="for users to create and refactor dimen xmls easliy">
+      <add-to-group group-id="RefactoringMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="control alt R"/>
+    </action>
+  </actions>
+
+</idea-plugin>
